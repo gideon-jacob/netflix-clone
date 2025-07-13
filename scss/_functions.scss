@@ -1,0 +1,16 @@
+@function rem($pixels, $context: 16) {
+  @return ($pixels / $context) * 1rem;
+}
+
+@function em($pixels, $context: 16) {
+  @return ($pixels / $context) * 1em;
+}
+
+@function columns ($columns, $grid-columns-count: 12, $gutter: 20px) {
+    @if ($columns == $grid-columns-count) {
+        @return 100%;
+    }
+    
+    $column-width: calc((100% * #{$columns} - (#{$gutter} * (#{$columns} - 1))) / #{$grid-columns-count});
+    @return $column-width;
+}

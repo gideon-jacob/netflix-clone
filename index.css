@@ -13,32 +13,118 @@ body {
   color: #ffffff;
 }
 
-.main {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 0 9.25rem;
-  position: relative;
+button {
+  cursor: pointer;
+  outline: none;
 }
 
-.top {
-  background-image: linear-gradient(65deg, black, transparent), url("https://dkr0pu7ej5xex.cloudfront.net/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg");
+.hero-wrapper {
+  min-height: 108vh;
+  padding: 0 9.25rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: linear-gradient(175deg, black 4%, transparent 40%), linear-gradient(0deg, black 5%, transparent 130%), url("https://dkr0pu7ej5xex.cloudfront.net/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-div {
-  display: block;
-  unicode-bidi: isolate;
+.hero {
+  flex-grow: 1;
+  max-width: 50%;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.hero .title {
+  line-height: 1.25;
+  font-weight: 800;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.hero .description {
+  font-size: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+.navbar .logo {
+  height: 40px;
+}
+.navbar .btn-wrapper {
+  display: flex;
+  gap: 0.7rem;
+  padding: 3px;
+}
+
+.lang-option-btn {
+  border: 1px solid #666;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+}
+.lang-option-btn:focus-within {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+.lang-option-btn select {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 21 21' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 0.1rem center/1rem 2rem;
+  padding-right: 1.5rem;
+  cursor: pointer;
+}
+.lang-option-btn select option {
+  color: black;
+}
+
+.btn-red-sm, .btn-red {
+  border: none;
+  border-radius: 0.25rem;
+  line-height: 1;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #e50914;
+}
+
+.btn-red {
+  font-size: 1.5rem;
+  min-height: 3.5rem;
+}
+
+.btn-red-sm {
+  font-size: 0.875rem;
+  min-height: 2rem;
+  padding: 0.25rem 1rem;
 }
 
 .curve-container {
   box-sizing: border-box;
   overflow-x: hidden;
   position: relative;
-  height: 6.25rem;
+  scale: 1.2;
+  height: 5.25rem;
   z-index: 1;
 }
 
@@ -77,42 +163,37 @@ div {
   background: linear-gradient(to right, rgb(33, 13, 22) 16%, rgb(184, 40, 105), rgb(229, 9, 20), rgb(184, 40, 105), rgb(33, 13, 22) 84%);
 }
 
-.main nav {
+.cta-wrapper {
+  width: 107%;
+}
+.cta-wrapper .cta-description {
+  font-size: 1rem;
+}
+.cta-wrapper .cta-button-wrapper {
+  display: flex;
+  align-self: stretch;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+.cta-wrapper .cta-button-wrapper input {
+  flex-grow: 8;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #666;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+.cta-wrapper .cta-button-wrapper input::placeholder {
+  color: #ccc;
+  opacity: 0.9;
+}
+.cta-wrapper .cta-button-wrapper button {
+  flex-grow: 2;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding-top: 1.5rem;
-}
-.main nav .logo {
-  height: 40px;
-}
-
-.hero {
-  color: #ffffff;
-  background-color: red;
-  height: 500px;
-}
-
-.separation1 {
-  height: 100px;
-  width: 80%;
-  position: absolute;
-  bottom: 0;
-  margin: auto;
-  border: solid 0.25rem transparent;
-  border-top-left-radius: 50% 100%;
-  border-top-right-radius: 50% 100%;
-  border-bottom: none;
-  background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
-}
-
-span {
-  display: inline;
-}
-
-#head {
-  padding-left: 90%;
+  gap: 0.7rem;
 }
 
 div.center {

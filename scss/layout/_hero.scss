@@ -1,0 +1,42 @@
+@use "../variables" as *;
+
+.hero-wrapper {
+  min-height: 108vh;
+  padding: 0 9.25rem;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  background-image: linear-gradient(175deg, black 4%, transparent 40%),
+    linear-gradient(0deg, black 5%, transparent 130%),
+    url("https://dkr0pu7ej5xex.cloudfront.net/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.hero {
+  flex-grow: 1;
+  max-width: 50%;
+  color: $text-primary;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+
+  .title {
+    line-height: 1.25;
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+}

@@ -1,26 +1,63 @@
-.btn {
-  font-weight: bold;
-  color: $text-primary;
-  background-color: transparent;
-  border: 1px solid $outline;
-  border-radius: 5em;
-  padding: 0.5em 0.8em;
+@use "../variables" as *;
+
+.lang-option-btn {
+  border: 1px solid #666;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.7rem;
+
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.4rem;
 
-  .img-icon {
-    margin: 0;
+  &:focus-within {
+    outline: 2px solid white;
+    outline-offset: 3px;
+  }
+
+  select {
+    font-size: 1rem;
+    color: $text-primary;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    appearance: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 21 21' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
+      no-repeat right 0.1rem center/1rem 2rem;
+    padding-right: 1.5rem;
+    cursor: pointer;
+
+    option {
+      color: black;
+    }
   }
 }
 
-.cta-btn {
-  color: #3ea6f4;
+%btn {
+  border: none;
+  border-radius: 0.25rem;
 
-  &:hover {
-    background-color: #3ea6f444;
-    border-color: #3ea6f404;
-  }
+  line-height: 1;
+  font-size: 1.5rem;
+  color: $text-primary;
+  background-color: $button-bg;
+}
+
+.btn-red {
+  @extend %btn;
+ 
+  font-size: 1.5rem;
+  min-height: 3.5rem;
+}
+
+.btn-red-sm {
+  @extend %btn;
+
+  font-size: 0.875rem;
+  min-height: 2rem;
+  padding: 0.25rem 1rem;
 }

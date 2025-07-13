@@ -1,0 +1,43 @@
+.cta-wrapper {
+  width: 107%;
+
+  .cta-description {
+    font-size: 1rem;
+  }
+
+  .cta-button-wrapper {
+    display: flex;
+    align-self: stretch;
+    gap: 0.5rem;
+    padding-top: 1rem;
+
+    input {
+      flex-grow: 8;
+
+      background-color: #00000066;
+      border: 1px solid #666;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+
+      &::placeholder {
+        color: #ccc;
+        opacity: 0.9;
+      }
+    }
+
+    button {
+      flex-grow: 2;
+      // other definition are in component/_button.scss
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 0.7rem;
+
+      // .msg {}
+      // .arrow {}
+    }
+  }
+}

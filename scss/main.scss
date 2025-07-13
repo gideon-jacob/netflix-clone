@@ -1,38 +1,27 @@
 // Import variables first
-@import "./variables";
+@use "./variables";
+@use "./functions";
 
 // Import base styles
-@import "./base/reset";
+@use "./base/reset";
 
 // Import layout components
-@import "./layout/app";
-@import "./layout/header";
-@import "./layout/body";
-@import "./layout/sidebar";
+@use "./layout/hero";
+@use "./layout/navbar";
+// @use "./layout/header";
+// @use "./layout/body";
+// @use "./layout/sidebar";
 
 // Import components
-@import "./components/button";
-@import "./components/navigation";
+@use "./components/button";
+@use "./components/curve-seperator";
+@use "./components/cta-wrapper";
 
-// Global styles
+// Global styles 
 // 
-// 
-.top {
-  background-image: linear-gradient(65deg, black, transparent), url('https://dkr0pu7ej5xex.cloudfront.net/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  font-family: Arial, Helvetica, sans-serif;
-}
+//  
 
-span {
-    display: inline;
-}
 
-#head {
-  padding-left:90%;
-}
-S
 div.center {
   margin-top: 15%;
   margin-left: 10%;

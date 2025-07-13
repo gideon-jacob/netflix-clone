@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+
+  .logo {
+    height: 40px;
+  }
+
+  .btn-wrapper {
+    display: flex;
+    gap: 0.7rem;
+    padding: 3px; // that's just how it was in official website..
+  }
+}
