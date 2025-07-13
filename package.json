@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass scss/main.scss:index.css --watch",
-    "sass:build": "sass scss/main.scss:index.css --style compressed"
+    "sass:build": "sass scss/main.scss:index.css --style compressed",
+    "dev": "browser-sync start --server --files '*.html, *.css, scss/**/*.scss' --watch",
+    "start": "npm run sass & npm run dev"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/gideon-jacob/youtube-html-clone#readme",
   "description": "",
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "sass": "^1.89.2"
   }
 }
