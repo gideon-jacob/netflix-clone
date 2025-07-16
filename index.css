@@ -41,28 +41,28 @@ button {
   align-items: center;
   align-self: center;
 }
-.hero .title {
+.hero .nf-hero-title {
   line-height: 1.25;
   font-weight: 800;
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
-.hero .description {
+.hero .nf-hero-description {
   font-size: 1.25rem;
   margin-bottom: 1.75rem;
 }
 
-.navbar {
+.nf-navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-top: 1.5rem;
 }
-.navbar .logo {
+.nf-navbar .nf-logo {
   height: 40px;
 }
-.navbar .btn-wrapper {
+.nf-navbar .btn-wrapper {
   display: flex;
   gap: 0.7rem;
   padding: 3px;

@@ -37,7 +37,7 @@
   }
 }
 
-%btn {
+%nf-btn {
   border: none;
   border-radius: 0.25rem;
 
@@ -48,14 +48,14 @@
 }
 
 .btn-red {
-  @extend %btn;
+  @extend %nf-btn;
  
   font-size: 1.5rem;
   min-height: 3.5rem;
 }
 
 .btn-red-sm {
-  @extend %btn;
+  @extend %nf-btn;
 
   font-size: 0.875rem;
   min-height: 2rem;
