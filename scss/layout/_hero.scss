@@ -1,7 +1,7 @@
 @use "../variables" as *;
 
 .hero-wrapper {
-  min-height: 108vh;
+  height: 102vh;
   padding: 0 9.25rem;
 
   display: flex;
@@ -12,13 +12,13 @@
     linear-gradient(0deg, black 5%, transparent 130%),
     url("https://dkr0pu7ej5xex.cloudfront.net/wp-content/uploads/2017/04/24135159/Netflix-Background.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: 100% 100%;
 }
 
 .hero {
   flex-grow: 1;
   max-width: 50%;
+  padding: 17vh 0; 
   color: $text-primary;
   text-align: center;
 

@@ -8,44 +8,19 @@
 // Import layout components
 @use "./layout/hero";
 @use "./layout/navbar";
-// @use "./layout/header";
-// @use "./layout/body";
-// @use "./layout/sidebar";
+@use "./layout/trending";
 
 // Import components
 @use "./components/button";
 @use "./components/curve-seperator";
 @use "./components/cta-wrapper";
+@use "./components/trending-card";
 
 // Global styles 
-// 
-//  
-
 
 div.center {
   margin-top: 15%;
   margin-left: 10%;
   margin-bottom: 15%;
   display: inline-block;
-  color: white;
-}
-
-#bigtext {
-  font-size: 50px;
-}
-
-.button {
-  background-color: red;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  border-radius: 5px;
-}
-
-.b1 {
-  padding: 10px 20px;
 }

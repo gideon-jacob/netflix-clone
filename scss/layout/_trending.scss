@@ -1,0 +1,92 @@
+@use "../mixins" as *;
+
+.treding-section {
+  padding: 0 9.25rem;
+  position: relative;
+
+  .section-title {
+    margin-bottom: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    @include lg {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.trending-card-scroll-wrapper {
+  position: relative;
+
+  .trending-scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    
+		background: black;
+    border: none;
+    
+		color: white;
+    font-size: 2rem;
+    border-radius: 2em;
+    width: 2.5rem;
+    height: 100%; 
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+		transition: 1.8s ease-in-out;
+
+		&.move-right {
+			left: 0;
+		
+			& img {
+				transform: rotate(180deg);				
+			}
+		}
+
+		&.move-left {
+			right: 0;
+		}
+
+		.icon-wrapper {
+			height: 40%;
+			background-color: #1a1a1a;
+			border-radius: 0.4rem;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			& img {
+				scale: 0.8;
+			}
+		}
+  }
+}
+
+.trending-card-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE and Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
+
+  gap: 1.25rem;
+  padding: 1.5rem 0.625rem;
+
+  @include lg {
+    gap: 2.75rem;
+    padding: 1.7rem 1.375rem;
+  }
+
+  @include xl {
+    padding: 1.8rem 1.375rem;
+  }
+}

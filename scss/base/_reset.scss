@@ -2,9 +2,6 @@
 
 :root {
   line-height: 1.5;
-  // --text-primary: #{$text-primary};
-  // --base-background: #{$base-background};
-  // --outline: #{$outline};
 }
 
 * {
@@ -13,9 +10,9 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: $background;
-  color: $text-primary;
+  font-family: Arial, Helvetica, sans-serif !important;
+  background-color: $background !important;
+  color: $text-primary !important;
 }
 
 button {

@@ -13,8 +13,9 @@
 
     input {
       flex-grow: 8;
-
-      background-color: #00000066;
+      color: white;
+      background-color: #0f0f0f44;
+      backdrop-filter: blur(2px);
       border: 1px solid #666;
       border-radius: 0.25rem;
       padding: 0.5rem 1rem;

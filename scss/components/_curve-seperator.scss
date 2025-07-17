@@ -2,11 +2,10 @@
 
 .curve-container {
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
   scale: 1.2;
   height: 5.25rem;
-  z-index: 1;
 }
 
 @include xl {

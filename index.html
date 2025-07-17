@@ -57,9 +57,96 @@
     </div>
 
 
-    <section class="treding-section">
-        
-    </section>
+    <div class="treding-section">
+       <h2 class="section-title">Trending Now</h2>
+
+       <div class="trending-card-scroll-wrapper">
+        <button id="trendingLeftBtn" aria-label="Scroll left" class="trending-scroll-btn move-right">
+					<span class="icon-wrapper">
+						<img src="./assets/images/right-arrow.svg" alt="arrow" />
+					</span>
+				</button>
+				<div class="trending-card-container" id="trendingCardContainer" style="scroll-behavior: smooth;">
+						<div class="trending-card card1"><span class="card-rank">1</span></div>
+						<div class="trending-card card2"><span class="card-rank">2</span></div>
+						<div class="trending-card card3"><span class="card-rank">3</span></div>
+						<div class="trending-card card4"><span class="card-rank">4</span></div>
+						<div class="trending-card card5"><span class="card-rank">5</span></div>
+						<div class="trending-card card6"><span class="card-rank">6</span></div>
+						<div class="trending-card card7"><span class="card-rank">7</span></div>
+						<div class="trending-card card8"><span class="card-rank">8</span></div>
+						<div class="trending-card card9"><span class="card-rank">9</span></div>
+						<div class="trending-card card10"><span class="card-rank">10</span></div>
+				</div>
+				<button id="trendingRightBtn" aria-label="Scroll right" class="trending-scroll-btn move-left">
+					<span class="icon-wrapper">
+						<img src="./assets/images/right-arrow.svg" alt="arrow" />
+					</span>
+				</button>
+       </div>
+
+       <script>
+        (function() {
+          const container = document.getElementById('trendingCardContainer');
+          const leftBtn = document.getElementById('trendingLeftBtn');
+          const rightBtn = document.getElementById('trendingRightBtn');
+
+          function getScrollAmount() {
+            // Get the width of a single card (assume all cards are same width)
+            const card = container.querySelector('.trending-card');
+            if (!card) return 1;
+            const cardStyle = window.getComputedStyle(card);
+            const cardWidth = card.offsetWidth + parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight);
+            
+            // How many cards fit in the visible area?
+            const cardsPerScroll = Math.max(1, Math.round(container.clientWidth / cardWidth));
+            const scrollAmount = cardWidth * cardsPerScroll;
+
+            return scrollAmount;
+          }
+
+          function updateButtons() {
+            // Show/hide left button
+            leftBtn.style.display = container.scrollLeft > 5 ? 'flex' : 'none';
+            // Show/hide right button
+            const maxScrollLeft = container.scrollWidth - container.clientWidth - 5;
+            rightBtn.style.display = container.scrollLeft < maxScrollLeft ? 'flex' : 'none';
+          }
+       
+					leftBtn.onclick = () => {
+						const scrollAmount = getScrollAmount();
+						const newScrollLeft = container.scrollLeft - scrollAmount;
+						// If we're almost at the left, or this scroll would take us past the left, scroll fully to 0
+						if (container.scrollLeft <= scrollAmount + 50) {
+							container.scrollTo({ left: 0, behavior: 'smooth' });
+						} else if (newScrollLeft <= 50) {
+							container.scrollTo({ left: 0, behavior: 'smooth' });
+						} else {
+							container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+						}
+					};
+					rightBtn.onclick = () => {
+						const scrollAmount = getScrollAmount();
+						const maxScrollLeft = container.scrollWidth - container.clientWidth;
+						const newScrollLeft = container.scrollLeft + scrollAmount;
+						// If we're almost at the right, or this scroll would take us past the right, scroll fully to max
+						if (maxScrollLeft - container.scrollLeft <= scrollAmount + 50) {
+							container.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+						} else if (newScrollLeft >= maxScrollLeft - 50) {
+							container.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+						} else {
+							container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+						}
+					};
+
+          container.addEventListener('scroll', updateButtons);
+          window.addEventListener('resize', updateButtons);
+
+          // Initial update after DOM is ready
+          setTimeout(updateButtons, 100);
+        })();
+       </script>
+    </div>
 
     <section class="first">
         <div>
