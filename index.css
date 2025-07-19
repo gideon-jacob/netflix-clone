@@ -120,6 +120,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.2s ease-in-out;
+}
+.trending-card-scroll-wrapper .trending-scroll-btn .icon-wrapper:hover {
+  background-color: #333333;
 }
 .trending-card-scroll-wrapper .trending-scroll-btn .icon-wrapper img {
   scale: 0.8;
@@ -310,10 +314,10 @@ button {
   user-select: none;
   font-family: inherit;
   font-weight: 800;
-  transform: scaleX(0.805);
+  transform: scaleX(0.85);
   color: black;
   white-space: nowrap;
-  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
   height: 1em;
   letter-spacing: -0.04em;
   font-size: 4rem;
@@ -325,7 +329,7 @@ button {
   .trending-card .card-rank {
     font-size: 5rem;
     -webkit-text-stroke: 0.05rem #fff;
-    bottom: 0;
+    bottom: 0.5rem;
     left: -1.375rem;
   }
 }
@@ -376,11 +380,11 @@ button {
   background-image: url("https://occ-0-5452-3663.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABa5jDjPetBJO0jgCfZHwMsKz5hkeopxLqh8hLCPqhIW2jviuL7hFC3vXLOIXAJNsjz5ijUoGK-JdosDsdxCq5Rg1kqeIiqQLHQQ.jpg?r=81d");
 }
 
-div.center {
-  margin-top: 15%;
-  margin-left: 10%;
-  margin-bottom: 15%;
-  display: inline-block;
+.reason-card {
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+}
+.reason-card .card-icon {
+  user-select: none;
 }
 
 /*# sourceMappingURL=index.css.map */

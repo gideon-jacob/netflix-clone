@@ -9,18 +9,11 @@
 @use "./layout/hero";
 @use "./layout/navbar";
 @use "./layout/trending";
+@use "./layout/reasons";
 
 // Import components
 @use "./components/button";
 @use "./components/curve-seperator";
 @use "./components/cta-wrapper";
 @use "./components/trending-card";
-
-// Global styles 
-
-div.center {
-  margin-top: 15%;
-  margin-left: 10%;
-  margin-bottom: 15%;
-  display: inline-block;
-}
+@use "./components/reason-card";
