@@ -1,0 +1,36 @@
+@use "../mixins" as *;
+
+// Center elements
+%center-container {
+  padding: 0 9.25rem;
+}
+
+// Default sub heading style
+%sub-heading-style {
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+
+  @include lg {
+    font-size: 1.5rem;
+  }
+}
+
+// Text overflow with ellipsis
+%text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Reset list styles
+%list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Smooth transitions
+%transition {
+  transition: all 0.3s ease-in-out;
+}

@@ -1,17 +1,12 @@
 @use "../mixins" as *;
+@use "../abstracts/placeholders" as *;
 
 .treding-section {
-  padding: 0 9.25rem;
+  @extend %center-container;
   position: relative;
 
   .section-title {
-    margin-bottom: 0;
-    font-size: 1.125rem;
-    font-weight: 500;
-
-    @include lg {
-      font-size: 1.5rem;
-    }
+    @extend %sub-heading-style;
   }
 }
 

@@ -1,6 +1,18 @@
+@use "../abstracts/placeholders" as *;
+
 .reason-section {
+    @extend %center-container;
+    margin-top: 2rem;
 
-    .reason-heading {}
+    .reason-heading {
+        @extend %sub-heading-style;
+        margin-bottom: 1rem;
+    }
 
-    .reason-card-container {}
+    .reason-card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+    }
 }
