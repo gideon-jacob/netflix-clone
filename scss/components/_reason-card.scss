@@ -1,11 +1,37 @@
+@use "../mixins" as *;
+@use "../functions" as grid;
+
 .reason-card {
     background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    padding: 0.5rem 1rem 7rem;
+    border-radius: 1rem;
+    position: relative;
+    
+    width: grid.columns(12);
 
-    .card-title {}
+    @include lg {
+        width: grid.columns(3);
+    }
 
-    .card-description {}
+    .card-title {
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin: 0.7rem 0;
+    }
+
+    .card-description {
+        color: #ffffffb3;
+        font-size: 1rem;
+        font-weight: 400;
+
+        margin-bottom: 0;
+    }
 
     .card-icon {
         user-select: none;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
     }
 }

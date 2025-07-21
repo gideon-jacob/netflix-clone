@@ -1,4 +1,5 @@
 @use "../abstracts/placeholders" as *;
+@use "../mixins" as *;
 
 .reason-section {
     @extend %center-container;
@@ -11,8 +12,12 @@
 
     .reason-card-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         gap: 1rem;
+        
+        @include lg {
+            flex-direction: row;
+        }
     }
 }
