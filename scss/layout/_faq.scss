@@ -1,0 +1,16 @@
+@use "../abstracts/placeholders" as *;
+
+.faq-section {
+    @extend %center-container;
+    margin-top: 2rem;
+
+    .faq-heading {
+        @extend %sub-heading-style;
+    }
+
+    .faq-card-wrapper-container {
+        
+    }
+}
+
+

@@ -1,7 +1,3 @@
-// Import variables first
-@use "./variables";
-@use "./functions";
-
 // Import base styles
 @use "./base/reset";
 
@@ -10,6 +6,7 @@
 @use "./layout/navbar";
 @use "./layout/trending";
 @use "./layout/reasons";
+@use "./layout/faq";
 
 // Import components
 @use "./components/button";
@@ -17,3 +14,4 @@
 @use "./components/cta-wrapper";
 @use "./components/trending-card";
 @use "./components/reason-card";
+@use "./components/faq-card";

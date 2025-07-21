@@ -23,13 +23,6 @@
   text-overflow: ellipsis;
 }
 
-// Reset list styles
-%list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 // Smooth transitions
 %transition {
   transition: all 0.3s ease-in-out;
