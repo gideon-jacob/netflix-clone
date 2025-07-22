@@ -68,7 +68,7 @@ button {
   padding: 3px;
 }
 
-.faq-section, .reason-section, .treding-section {
+.cta-section, .faq-section, .reason-section, .treding-section {
   padding: 0 9.25rem;
 }
 
@@ -81,6 +81,10 @@ button {
   .faq-section .faq-heading, .reason-section .reason-heading, .treding-section .section-title {
     font-size: 1.5rem;
   }
+}
+
+.faq-card {
+  transition: all 0.3s ease-in-out;
 }
 
 .treding-section {
@@ -177,6 +181,26 @@ button {
 .faq-section {
   margin-top: 2rem;
 }
+.faq-section .faq-heading {
+  margin-bottom: 0.5rem;
+}
+.faq-section .faq-card-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cta-section {
+  margin-top: 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cta-section .cta-wrapper {
+  width: 65%;
+}
+
 .lang-option-btn {
   border: 1px solid #666;
   border-radius: 0.25rem;
@@ -213,6 +237,7 @@ button {
   border-radius: 0.25rem;
   line-height: 1;
   font-size: 1.5rem;
+  font-weight: 500;
   color: #ffffff;
   background-color: #e50914;
 }
@@ -299,6 +324,8 @@ button {
 }
 .cta-wrapper .cta-button-wrapper button {
   flex-grow: 2;
+  max-width: 13rem;
+  min-height: 3.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -439,8 +466,36 @@ button {
   list-style-type: none;
 }
 
+.faq-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #2d2d2d;
+  padding: 1.5rem;
+}
+.faq-card:hover {
+  background-color: #414141;
+}
+.faq-card .faq-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.faq-card .faq-card-icon {
+  width: 2.5rem;
+}
+
 .faq-card-answer {
   display: none;
+  background-color: #2d2d2d;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 0.25rem;
+  padding: 1.5rem;
 }
 
 /*# sourceMappingURL=index.css.map */
