@@ -3,13 +3,16 @@
 .faq-section {
     @extend %center-container;
     margin-top: 2rem;
-
+    
     .faq-heading {
         @extend %sub-heading-style;
+        margin-bottom: 0.5rem; 
     }
 
     .faq-card-wrapper-container {
-        
+       display: flex; 
+       flex-direction: column;
+       gap: 0.5rem;
     }
 }
 

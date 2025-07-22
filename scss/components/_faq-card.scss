@@ -1,17 +1,46 @@
+@use "../abstracts/placeholders" as *;
+
 .faq-card-wrapper {
     list-style-type: none;
 }
 
 .faq-card {
-    .faq-card-title {
-        
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #ffffff;
 
+    cursor: pointer; 
+    background-color: #2d2d2d;
+    padding: 1.5rem;
+
+    @extend %transition;
+
+    &:hover {
+        background-color: #414141;
+    }
+    
+    .faq-card-title {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
+    
     .faq-card-icon {
-        
+        width: 2.5rem;
     }
 }
 
 .faq-card-answer {
     display: none;
+    
+    background-color: #2d2d2d;
+    font-size: 1.5rem;
+    line-height: 1;
+
+    margin-top: 0.25rem;
+    padding: 1.5rem;
 }
