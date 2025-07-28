@@ -18,11 +18,11 @@ button {
   outline: none;
 }
 
-.cta-section, .faq-section, .reason-section, .treding-section, .hero-wrapper {
+footer, .cta-section, .faq-section, .reason-section, .treding-section, .hero-wrapper {
   padding: 0 9.25rem;
 }
 @media (min-width: 1920px) {
-  .cta-section, .faq-section, .reason-section, .treding-section, .hero-wrapper {
+  footer, .cta-section, .faq-section, .reason-section, .treding-section, .hero-wrapper {
     padding: 0 22.125rem;
   }
 }
@@ -202,7 +202,7 @@ button {
 }
 
 .cta-section {
-  margin-top: 4rem;
+  margin: 4rem 0;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -210,6 +210,21 @@ button {
 }
 .cta-section .cta-wrapper {
   width: 65%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: rgba(255, 255, 255, 0.6666666667);
+}
+footer a {
+  color: rgba(255, 255, 255, 0.6666666667);
+}
+footer .netflix-text {
+  font-weight: lighter;
+  font-size: 14px;
+  margin-top: 20px;
 }
 
 .lang-option-btn {
@@ -399,6 +414,11 @@ button {
   .trending-card .card-rank {
     font-size: 6.25rem;
     -webkit-text-stroke: 0.1rem #fff;
+  }
+}
+@media (min-width: 1920px) {
+  .trending-card .card-rank {
+    font-size: 7.5rem;
   }
 }
 

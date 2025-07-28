@@ -1,0 +1,28 @@
+@use "../variables" as *;
+@use "../abstracts/placeholders" as *;
+
+footer {
+    @extend %center-container;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $text-secondary;
+
+    a {
+        color: $text-secondary;
+    }
+
+    .cta-call {}
+
+    .footer {
+        .footer-item {}
+    }
+
+    .lang-option-btn {}
+
+    .netflix-text {
+        font-weight: lighter;
+        font-size: 14px;
+        margin-top: 20px
+    }
+}

@@ -58,6 +58,10 @@
       font-size: 6.25rem;
       -webkit-text-stroke: 0.1rem #fff;
     }
+
+    @include xxl {
+      font-size: 7.5rem;
+    }
   }
 }
 
