@@ -3,16 +3,26 @@
 // Center elements
 %center-container {
   padding: 0 9.25rem;
+
+  @include xxl {
+    padding: 0 22.125rem;
+  }
 }
 
 // Default sub heading style
 %sub-heading-style {
+  font-family: unset;
   margin-bottom: 0;
   font-size: 1.125rem;
   font-weight: 500;
 
   @include lg {
     font-size: 1.5rem;
+  }
+
+  @include xxl {
+    font-size: 2rem;
+    font-weight: 700;
   }
 }
 

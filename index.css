@@ -18,9 +18,39 @@ button {
   outline: none;
 }
 
+.cta-section, .faq-section, .reason-section, .treding-section, .hero-wrapper {
+  padding: 0 9.25rem;
+}
+@media (min-width: 1920px) {
+  .cta-section, .faq-section, .reason-section, .treding-section, .hero-wrapper {
+    padding: 0 22.125rem;
+  }
+}
+
+.faq-section .faq-heading, .reason-section .reason-heading, .treding-section .section-title {
+  font-family: unset;
+  margin-bottom: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+@media (min-width: 960px) {
+  .faq-section .faq-heading, .reason-section .reason-heading, .treding-section .section-title {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  .faq-section .faq-heading, .reason-section .reason-heading, .treding-section .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+.faq-card {
+  transition: all 0.3s ease-in-out;
+}
+
 .hero-wrapper {
   height: 102vh;
-  padding: 0 9.25rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -66,25 +96,6 @@ button {
   display: flex;
   gap: 0.7rem;
   padding: 3px;
-}
-
-.cta-section, .faq-section, .reason-section, .treding-section {
-  padding: 0 9.25rem;
-}
-
-.faq-section .faq-heading, .reason-section .reason-heading, .treding-section .section-title {
-  margin-bottom: 0;
-  font-size: 1.125rem;
-  font-weight: 500;
-}
-@media (min-width: 960px) {
-  .faq-section .faq-heading, .reason-section .reason-heading, .treding-section .section-title {
-    font-size: 1.5rem;
-  }
-}
-
-.faq-card {
-  transition: all 0.3s ease-in-out;
 }
 
 .treding-section {

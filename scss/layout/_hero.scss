@@ -1,8 +1,9 @@
 @use "../variables" as *;
+@use "../abstracts/placeholders" as *;  
 
 .hero-wrapper {
   height: 102vh;
-  padding: 0 9.25rem;
+  @extend %center-container;
 
   display: flex;
   flex-direction: column;
