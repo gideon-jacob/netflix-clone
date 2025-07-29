@@ -7,22 +7,38 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     color: $text-secondary;
+    padding-bottom: 8.5rem;
 
     a {
         color: $text-secondary;
     }
 
-    .cta-call {}
-
-    .footer {
-        .footer-item {}
+    .cta-call {
+        padding-bottom: 2.5rem;
     }
 
-    .lang-option-btn {}
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: stretch;
+        
+        .footer-item {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+    }
+
+    .lang-option-btn {
+        margin-top: 3rem;
+    }
 
     .netflix-text {
         font-weight: lighter;
         font-size: 14px;
-        margin-top: 20px
+        margin-top: 2.5rem;
     }
 }
