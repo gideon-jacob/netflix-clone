@@ -2,7 +2,11 @@
 
 // Center elements
 %center-container {
-  padding: 0 9.25rem;
+  padding: 0 2rem;
+
+  @include lg {
+    padding: 0 9.25rem;
+  }
 
   @include xxl {
     padding: 0 22.125rem;

@@ -19,7 +19,12 @@ button {
 }
 
 footer, .cta-section, .faq-section, .reason-section, .treding-section, .hero-wrapper {
-  padding: 0 9.25rem;
+  padding: 0 2rem;
+}
+@media (min-width: 960px) {
+  footer, .cta-section, .faq-section, .reason-section, .treding-section, .hero-wrapper {
+    padding: 0 9.25rem;
+  }
 }
 @media (min-width: 1920px) {
   footer, .cta-section, .faq-section, .reason-section, .treding-section, .hero-wrapper {
@@ -90,7 +95,12 @@ footer, .cta-section, .faq-section, .reason-section, .treding-section, .hero-wra
   padding-top: 1.5rem;
 }
 .nf-navbar .nf-logo {
-  height: 40px;
+  height: 25px;
+}
+@media (min-width: 960px) {
+  .nf-navbar .nf-logo {
+    height: 40px;
+  }
 }
 .nf-navbar .btn-wrapper {
   display: flex;
@@ -273,6 +283,14 @@ footer .netflix-text {
   background: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 21 21' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 0.1rem center/1rem 2rem;
   padding-right: 1.5rem;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .lang-option-btn select {
+    color: transparent;
+    width: 0;
+    padding: 0;
+    background: none;
+  }
 }
 .lang-option-btn select option {
   color: black;
